@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #00082F;
+    --bg-hover: #364FC7;
+    --text-color: #EDF2FF;
+    --button-color: #4263EB;
+    --footer-color: #FEFEFE;
+    --button-color-alpha: rgba(66, 99, 235, 0.6);
+}
+
+body.dark-pink{
+    --bg-color: #1F000B;
+    --bg-hover: #A61E4D;
+    --text-color: #FFF0F6;
+    --button-color: #D6336C;
+    --footer-color: #FFF0F6;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.toggle{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+body{
+    background: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.myUser{
+    width: 300px;
+    text-align: center;
+    margin: 60px auto;
+}
+
+.my_photo{
+    width: 100px;
+    height: 100px;
+    padding: 3.6px;
+    border-radius: 50%;
+    border: var(--button-color) solid 4px;
+    margin-bottom: 1.5rem;
+}
+
+img{
+    width: 100%;
+}
+
+h1{
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.username{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 1.1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.myLinks{
+    width: 100%;
+}
+
+.myLinks__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.myLinks__list__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 30%;
+    border-radius: .375rem;
+    margin-bottom: 1rem;
+
+    background: var(--button-color);
+    transition: background 0.2s;
+}
+
+.myLinks__list__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    color: var(--text-color);
+    font-size: .875rem;
+
+}
+
+.myLinks__list__item:hover{
+    background: var(--bg-hover);
+}
+
+/*=======MEUS PROJETOS=====*/
+.projects{
+    margin: 0 auto;
+}
+
+.myProjects{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 33.33%);
+    grid-gap: 1rem;
+}
+
+.project1{
+    background: url(assets/images/project1.jpg) center / cover no-repeat;
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+}
+
+.project2{
+    background: url(assets/images/project2.jpg) center / cover no-repeat;
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+}
+
+.project3{
+    background: url(assets/images/project3.jpg) center / cover no-repeat;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+}
+
+.project4{
+    background: url(assets/images/project4.jpg) center / cover no-repeat;
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+}
+
+.project5{
+    background: url(assets/images/project5.jpg) center / cover no-repeat;
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+}
+
+.myProject{
+    display: flex;
+    align-items: flex-end;
+}
+
+.myProject__title{
+    background: var(--button-color-alpha);
+    color: var(--text-color);
+    padding: 0.6rem;
+    text-align: center;
+    width: 100%;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.myProject__title:hover{
+    background: var(--bg-hover);
+    transition: background 0.5s;
+}
+
+.myProject__link{
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+}
+
+.myProject__link:hover{
+    transition: background 0.5s;
+}
+
+@media screen and (max-width: 998px){
+
+    .myLinks__list{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .myLinks__list__item{
+        width: 100%;
+    }
+
+    .myProjects{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myProject{
+        height: 100%;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
